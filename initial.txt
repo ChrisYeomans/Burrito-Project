@@ -1,0 +1,100 @@
+1 33 The Paddocks, Oldtown Mill, Celbridge, Co. Kildare 7:12 PM 53.3473 -6.55057
+2 156 Glendale, Leixlip, Co. Kildare 7:12 PM 53.37077 -6.48279
+3 26 Thornhill Meadows, Celbridge, Co. Kildare 7:12 PM 53.35152 -6.54989
+4 47 Meadowbrook Avenue,Maynooth Co Kildare 7:12 PM 53.37278 -6.59611
+5 112 Mill Lane, Kilcock, Co. Kildare 7:13 PM 53.40126 -6.6683
+6 54 Willowbrook Lawns, Celbridge, Co. Kildare 7:14 PM 53.34484 -6.54766
+7 416A Ballyoulster, Celbridge, Co. Kildare 7:15 PM 53.34133 -6.51856
+8 37 The Orchard, Oldtown Mill, Celbridge, Co. Kildare 7:15 PM 53.34492 -6.5557
+9 4 Abbey Park Grove, Clane, Co. Kildare 7:16 PM 53.29206 -6.67685
+10 36 Rinawade Park, Leixlip, Co. Kildare 7:16 PM 53.36483 -6.51278
+11 1 The Close, Temple Manor,Celbridge , Co.Kildare 7:16 PM 53.33067 -6.54686
+12 35 Beech Park Wood Beech Park,Leixlip Co Kildare 7:16 PM 53.36287 -6.52468
+13 544 Riverforest, Leixlip, Co. Kildare 7:17 PM 53.37416 -6.49494
+14 54 Courtown Park,Kilcock Co Kildare 7:17 PM 53.39549 -6.67647
+15 10 The Drive, Abbeyfarm, Celbridge, Co. Kildare 7:18 PM 53.33239 -6.55163
+16 43 The Woodlands, Castletown, Celbridge, Co. Kildare 7:18 PM 53.34678 -6.53415
+17 1002 Avondale, Leixlip, Co. Kildare 7:18 PM 53.36869 -6.48314
+18 38 Parsons Hall, Maynooth, Co. Kildare 7:19 PM 53.37521 -6.6103
+19 32 The View, St.Wolstan Abbey,Celbridge, Co.Kildare 7:20 PM 53.33751 -6.53173
+20 10 Glen Easton Crescent, Leixlip, Co. Kildare 7:21 PM 53.37184 -6.50065
+21 11 Rinawade View, Leixlip, Co. Kildare 7:21 PM 53.36143 -6.51849
+22 856 Old Greenfield, Maynooth, Co. Kildare 7:21 PM 53.37473 -6.59338
+23 28 The Avenue, Castletown, Co.Kildare, Celbridge, Co. Kildare 7:22 PM 53.34514 -6.53615
+24 9 The Park, Louisa Valley, Leixlip, Co. Kildare 7:22 PM 53.36115 -6.48907
+25 33 Leinster Wood,Carton Demesne, Maynooth, Co. Kildare 7:23 PM 53.39351 -6.5542
+26 16 Priory Chase, St.Raphaels Manor,,Celbridge, Co.Kildare 7:23 PM 53.33886 -6.55468
+27 14 The Rise, Louisa Valley, Leixlip, Co. Kildare 7:25 PM 53.36115 -6.48907
+28 646 Riverforest,Leixlip Co Kildare 7:26 PM 53.37497 -6.4991
+29 76 Castle Dawson, Maynooth, Co. Kildare 7:27 PM 53.37565 -6.60716
+30 23 Priory Way, St.Raphaels Manor,,Celbridge, Co.Kildare 7:27 PM 53.3354 -6.55111
+31 5 Rinawade View, Leixlip, Co. Kildare 7:28 PM 53.36143 -6.51849
+32 11 The Park, Louisa Valley, Leixlip, Co. Kildare 7:28 PM 53.36115 -6.48907
+33 117 Royal Meadows,Kilcock Co Kildare 7:28 PM 53.39459 -6.66995
+34 12 Maynooth Park, Maynooth, Co. Kildare 7:29 PM 53.37122 -6.586
+35 30 Ryevale Lawns, Leixlip, Co. Kildare 7:30 PM 53.36656 -6.49183
+36 44 Rinawade Avenue, Leixlip, Co. Kildare 7:30 PM 53.36141 -6.51834
+37 7 Straffan Green, Straffan Wood, Maynooth, Co. Kildare 7:30 PM 53.37323 -6.58859
+38 29 Castletown, Leixlip, Co. Kildare 7:31 PM 53.36292 -6.50203
+39 1 Kyldar House, Manor Mills, Maynooth, Co. Kildare 7:31 PM 53.38122 -6.59226
+40 83 Thornhill Meadows, Celbridge, Co. Kildare 7:31 PM 53.35098 -6.54915
+41 90 Vanessa Lawns, Celbridge, Co. Kildare 7:31 PM 53.34312 -6.54747
+42 50 The Lawn, Oldtown Mill, Celbridge, Co. Kildare 7:31 PM 53.34197 -6.55492
+43 20 Habourview, The Glenroyal Centre, Maynooth, Co. Kildare 7:31 PM 53.37954 -6.58793
+44 13 The Little Grove, Celbridge, Co Kildare 7:32 PM 53.33835 -6.53984
+45 10 Brookfield Avenue,Maynooth Co Kildare 7:32 PM 53.36976 -6.59828
+46 35 Rail Park, Co.Kildare, Maynooth, Co. Kildare 7:32 PM 53.37811 -6.57952
+47 10 Fair Green Court, Kilccock,, Co. Kildare 7:33 PM 53.39847 -6.66787
+48 3 Lyreen Park,Maynooth Co Kildare 7:34 PM 53.38579 -6.58673
+49 34 Silken Vale, Maynooth, Co. Kildare 7:34 PM 53.37626 -6.59308
+50 35 Glen Easton Square, Leixlip, Co. Kildare 7:34 PM 53.37336 -6.48219
+51 10 The Court, Abbey Farm,,Celbridge, Co.Kildare 7:34 PM 53.33032 -6.55311
+52 4 Glendale, Leixlip, Co. Kildare 7:35 PM 53.37201 -6.48517
+53 628 Riverforest, Leixlip, Co. Kildare 7:35 PM 53.37416 -6.49731
+54 111 Elton Court, Leixlip, Co. Kildare 7:36 PM 53.36164 -6.50526
+55 169 Glendale, Co.Kildare, Leixlip, Co. Kildare 7:36 PM 53.37043 -6.48193
+56 94 Croduan Forest Park, Celbridge, Co. Kildare 7:36 PM 53.35372 -6.54564
+57 13 Abbey Park Court , Clane, , Co Kildare. 7:37 PM 53.2908 -6.67746
+58 533 Courtown Road, Kilcock, Co. Kildare 7:37 PM 53.39792 -6.6711
+59 13 The Hawthorns, Kilcock, Co. Kildare 7:37 PM 53.39315 -6.66909
+60 106 The Drive, Castletown,,Celbridge, Co.Kildare 7:39 PM 53.34439 -6.53841
+61 15 Willow Rise, Primrose Gate, Celbridge, Co. Kildare 7:41 PM 53.33591 -6.53566
+62 7 Rinawade Park, Leixlip, Co. Kildare 7:41 PM 53.3632 -6.51178
+63 40 Oaklawn West., Leixlip, Co. Kildare 7:42 PM 53.36833 -6.50589
+64 12 Castlevillage Avenue, Celbridge, Co. Kildare 7:42 PM 53.35298 -6.54921
+65 107 Castle Dawson, Maynooth, Co. Kildare 7:43 PM 53.38122 -6.59226
+66 2 The Downs, St.Wolstan Abbey,,Celbridge, Co.Kildare 7:43 PM 53.33605 -6.53414
+67 44 Simmonstown Manor, Celbridge, Co. Kildare 7:43 PM 53.33324 -6.53978
+68 2 Parsons Street, Maynooth, Co. Kildare 7:43 PM 53.38039 -6.59368
+69 6 Glen Easton View,Leixlip Co Kildare 7:45 PM 53.36883 -6.51468
+70 78 Crodaun Forest Park, Celbridge, Co. Kildare 7:45 PM 53.35401 -6.54603
+71 172 Woodview, Castletown, Celbridge, Co. Kildare 7:45 PM 53.34745 -6.53401
+72 116 Connaught Street, Kilcock, Co. Kildare 7:46 PM 53.39839 -6.66767
+73 35 The Paddocks, Oldtown Mill, Celbridge, Co. Kildare 7:47 PM 53.3473 -6.55057
+74 11 The Lodge,, Abbeylands,, Clane,, Co. Kildare. 7:48 PM 53.29128 -6.67836
+75 113 Elton Court, Leixlip, Co. Kildare 7:48 PM 53.36158 -6.50533
+76 3 Greenfield Drive, Maynooth, Co. Kildare 7:48 PM 53.3727 -6.58757
+77 13 Castlevillage Lawns, Celbridge, Co. Kildare 7:48 PM 53.35321 -6.55412
+78 902 Lady Castle, K Club, Straffan, Co. Kildare 7:49 PM 53.31159 -6.60538
+79 13 Rinawade Close, Leixlip, Co. Kildare 7:50 PM 53.36455 -6.51435
+80 Apartment 1, The Lamps, School Street, Kilcock, Co. Kildare 7:50 PM 53.39999 -6.66807
+81 2 Beaufield Drive, Maynooth, Co. Kildare 7:50 PM 53.37414 -6.60028
+82 509 Riverforest, Leixlip, Co. Kildare 7:50 PM 53.37402 -6.49363
+83 43 The Green Moyglare Hall,Maynooth Co Kildare 7:51 PM 53.38983 -6.5951
+84 636 St.Patrick Park,Celbridge, Co.Kildare 7:51 PM 53.34033 -6.54596
+85 132 The Peninsula, Alexandra Walk, Clane, Co. Kildare 7:51 PM 53.28973 -6.67445
+86 14 Rye River Crescent, Dun Carraig, Leixlip, Co. Kildare 7:52 PM 53.36518 -6.48913
+87 348 Ryevale Lawns, Leixlip, Co. Kildare 7:52 PM 53.36873 -6.49619
+88 17 The Crescent, Abbey Farm,,Celbridge, Co.Kildare 7:52 PM 53.33256 -6.55056
+89 36 Castledawson,Maynooth Co Kildare 7:53 PM 53.37565 -6.60701
+90 28 The Lawn Moyglare Abbey,Maynooth Co Kildare 7:53 PM 53.38895 -6.60579
+91 104c Beatty Park, Celbridge, Co. Kildare 7:54 PM 53.34648 -6.54552
+92 40 Thornhill Meadows, Celbridge, Co. Kildare 7:55 PM 53.35202 -6.55099
+93 18 College Green, Maynooth, Co.Kildare 7:55 PM 53.37247 -6.60044
+94 1 Beaufield Crescent, Maynooth, Co Kildare 7:56 PM 53.37449 -6.60005
+95 6 Glen Easton Grove ,Leixlip Co Kildare 7:56 PM 53.36559 -6.51914
+96 14 The Avenue, Rochford, Bakers Walk, Kilcock, Co. Kildare 7:57 PM 53.39648 -6.66612
+97 7 Riverlawn, Abbeyfarm, Celbridge, Co. Kildare 7:57 PM 53.33239 -6.55163
+98 51 Royal Meadows, Kilcock, Co. Kildare 7:57 PM 53.39512 -6.67084
+99 96 Priory Lodge, St. Raphael's Manor, Celbridge, Co. Kildare 7:58 PM 53.33835 -6.53984
+100 18 Castle Dawson, Maynooth,, Co. Kildare 7:58 PM 53.37538 -6.60707
