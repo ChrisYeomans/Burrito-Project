@@ -7,31 +7,21 @@ using namespace std;
  
 const static double EarthRadiusKm = 6372.8;
  
-inline double DegreeToRadian(double angle)
-{
+inline double DegreeToRadian(double angle) {
 	return M_PI * angle / 180.0;
 }
- 
+
 class Coordinate
 {
 public:
-	Coordinate(double latitude ,double longitude):myLatitude(latitude), myLongitude(longitude)
-	{}
- 
-	double Latitude() const
-	{
-		return myLatitude;
+	double lat, lon;
+	Coordinate(double latitude, double longitude){
+		lat = latitude;
+		lon = longitude;
 	}
- 
-	double Longitude() const
-	{
-		return myLongitude;
-	}
- 
-private:
- 
-	double myLatitude;
-	double myLongitude;
+	Coordinate() {}
+	double Latitude() const{return lat;}
+	double Longitude() const {return lon;}
 };
  
 double HaversineDistance(const Coordinate& p1, const Coordinate& p2)
@@ -50,18 +40,28 @@ double HaversineDistance(const Coordinate& p1, const Coordinate& p2)
 
 class Order {
 	public:
-	pair<float, float> location;
+	Coordinate location;
 	string time;
-	Order(pair<float, float> l, string t) {
-		location = l;
+	int index;
+	Order(double lat, double lon, string t, int i) {
+		location = Coordinate(lat, lon);
 		time = t;
+		index = i;
 	}
 	Order() {}
 	void print_vals() {
-		cout << location.first << " " << location.second << " " << time << endl;
+		cout << fixed;
+		cout  << location.lat << " " << location.lon << " " << time << endl;
 	}
-	float dist(Order one, Order two) {
-		return HaversineDistance(Coordinate(one.location.first, one.location.second), Coordinate(two.location.first, two.location.second));
+	double dist(Order one, Order two) {
+		return HaversineDistance(one.location, two.location);
 	}
-
+	bool achievable(double ct, Coordinate curr_loc) const {
+		return (stoi(time.substr(2, 2)) + -30 >= ct - this->time_to_get(curr_loc));
+	}
+	double time_to_get(Coordinate curr) const {
+    	return (HaversineDistance(curr, location)/80)*60;
+	}
+	friend bool operator <(const Order& a, const Order&b);
+	friend bool operator >(const Order& a, const Order&b);
 };

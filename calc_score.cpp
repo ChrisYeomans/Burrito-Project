@@ -10,14 +10,16 @@ typedef vector<int> vi;
 
 int main() {
     float lat, lon, dist, curr_time = 0, score = 0;
-    pair<float, float> cur_loc = make_pair(53.38195, -6.59192);
+    Coordinate cur_loc = Coordinate(53.38195, -6.59192);
     string time;
-    int index;
+
     for (int i=0;i<100;i++) {
-    	cin >> index >> lat >> lon >> time;
-    	dist = HaversineDistance(Coordinate(cur_loc.first, cur_loc.second), Coordinate(lat, lon));
+    	cin  >> lat >> lon >> time;
+    	dist = HaversineDistance(cur_loc, Coordinate(lat, lon));
+        cur_loc = Coordinate(lat, lon);
     	curr_time += (dist/80)*60;
     	score += curr_time + (60 - stoi(time.substr(2, 2)));
+        cerr << "dist " << dist << " time due: " << time <<  " curr time " << curr_time << " score change " << curr_time + (60 - stoi(time.substr(2, 2))) << endl; 
     }
     cout << score << endl;
 }
