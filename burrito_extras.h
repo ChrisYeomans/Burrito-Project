@@ -61,7 +61,7 @@ class Order {
 		cout << location.first << " " << location.second << " " << time << endl;
 	}
 	float dist(Order one, Order two) {
-		return HaversineDistance((one.location.first, one.location.seond), (two.location.first, two.location.second));
+		return HaversineDistance(Coordinate(one.location.first, one.location.second), Coordinate(two.location.first, two.location.second));
 	}
 
 };
