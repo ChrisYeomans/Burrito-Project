@@ -13,7 +13,7 @@ typedef vector<int> vi;
 
 int main() {
 	srand(time(0));
-	double lat, lon, dist, best_score = 20000, tmp_score;
+	double lat, lon, dist, best_score = 15053, tmp_score;
 	string time;
 	Order temp;
 	int r_num1, r_num2, r_num3;
@@ -41,11 +41,11 @@ int main() {
 			tmp[r_num2] = tmp[r_num3];
 			tmp[r_num3] = temp;
 		}
-		for(Order q : tmp) cerr << q.index << " ";
-		cerr << endl;
+		//for(Order q : tmp) cerr << q.index << " ";
+		//cerr << endl;
 
 		tmp_score = calc(tmp);
-		cerr << "tmp_score " << tmp_score << endl;
+		//cerr << "tmp_score " << tmp_score << endl;
 		if (tmp_score < best_score) {
 			best_score = tmp_score;
 			cout << best_score << endl;

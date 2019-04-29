@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "burrito_extras.h"
+#include "calc_score.h"
 #define INF 1000000000
 using namespace std;
 
@@ -21,6 +22,7 @@ int main() {
 	int tmp_index;
 	double lat, lon, dist_shop, dist, tmp_min;
 	vector<Coordinate> pos_vec;
+    vector<Order> out_vec;
 	vector<Order> order_vec;
     vi final_index_vec;
     priority_queue<Order> time_q;
@@ -29,7 +31,7 @@ int main() {
     Coordinate cl = Coordinate(53.38195, -6.59192);
 
     for (int i=0;i<100;i++) {
-        cin >> time >> lat >> lon >> dist_shop;
+        cin >> lat >> lon >> time;
         pos_vec.push_back(Coordinate(lat, lon));
         cerr  << lat << " " << lon << endl;
         order_vec.push_back(Order(lat, lon, time, i));
@@ -61,5 +63,8 @@ int main() {
         }
         final_index_vec.push_back(tmp_index);
     }
-    for (int i=0;i<100;i++) {order_vec[final_index_vec[i]].print_vals();}
+    for (int i=0;i<100;i++) out_vec.push_back(order_vec[final_index_vec[i]]);
+    cout << calc(out_vec) << endl;
+    for(Order o : out_vec) cout << o.index << " ";
+    cout << endl;
 }
