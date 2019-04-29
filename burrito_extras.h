@@ -1,3 +1,6 @@
+#ifndef burrito_extras
+#define burrito_extras
+
 #define _USE_MATH_DEFINES
  
 #include <math.h>
@@ -11,8 +14,7 @@ inline double DegreeToRadian(double angle) {
 	return M_PI * angle / 180.0;
 }
 
-class Coordinate
-{
+class Coordinate {
 public:
 	double lat, lon;
 	Coordinate(double latitude, double longitude){
@@ -24,8 +26,7 @@ public:
 	double Longitude() const {return lon;}
 };
  
-double HaversineDistance(const Coordinate& p1, const Coordinate& p2)
-{
+double HaversineDistance(const Coordinate& p1, const Coordinate& p2) {
 	double latRad1 = DegreeToRadian(p1.Latitude());
 	double latRad2 = DegreeToRadian(p2.Latitude());
 	double lonRad1 = DegreeToRadian(p1.Longitude());
@@ -65,3 +66,5 @@ class Order {
 	friend bool operator <(const Order& a, const Order&b);
 	friend bool operator >(const Order& a, const Order&b);
 };
+
+#endif

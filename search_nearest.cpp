@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "burrito_extras.h"
+#include "calc_score.h"
 #define INF 1000000000
 using namespace std;
 
@@ -41,6 +42,5 @@ int main() {
     	}
     	min_dist_vec.push_back(tmp_index);
     }
-    for (int e : min_dist_vec) {order_vec[e].print_vals();}
-    cout << endl;
+    cout << calc(order_vec) << " " << endl;
 }
