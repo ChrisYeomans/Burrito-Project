@@ -19,11 +19,13 @@ bool operator >(const Order& a, const Order& b) {
 
 int main() {
 	string time;
-	int tmp_index;
+	int tmp_index, curr;
 	double lat, lon, dist_shop, dist, tmp_min;
 	vector<Coordinate> pos_vec;
     vector<Order> out_vec;
 	vector<Order> order_vec;
+    vector<bool> used;
+    used.reserve(100);
     vi final_index_vec;
     priority_queue<Order> time_q;
     vector<Order> passed_orders;
@@ -33,38 +35,43 @@ int main() {
     for (int i=0;i<100;i++) {
         cin >> lat >> lon >> time;
         pos_vec.push_back(Coordinate(lat, lon));
-        cerr  << lat << " " << lon << endl;
         order_vec.push_back(Order(lat, lon, time, i));
         time_q.push(Order(lat, lon, time, i));
     }
 
     while (!time_q.empty()) {
         if (time_q.top().achievable(ct, cl)) {
-            final_index_vec.push_back(time_q.top().index);
+            out_vec.push_back(time_q.top());
             ct += time_q.top().time_to_get(cl);
             cl = time_q.top().location;
+
+            cerr << time_q.top().index << endl;
+
+            curr = time_q.top().index;
+            used[time_q.top().index] = true;
             time_q.pop();
         } else {
             passed_orders.push_back(time_q.top());
             time_q.pop();
         }
     }
-    for (int i=0;i<passed_orders.size();i++) { // greedy distance based algorithm to finish off
-        tmp_min = 500.0;
+    cerr << "Switching" << endl;
+    while(out_vec.size() < 100) {
+        tmp_min = 99999.99;
         for (int j=0;j<passed_orders.size();j++) {
-            if (j != i) {
-                dist = HaversineDistance(passed_orders[i].location, passed_orders[j].location);
-                if ((tmp_min > dist) && (count(final_index_vec.begin(), final_index_vec.end(), j) < 1)) {
+            if (j!=curr) {
+                dist = HaversineDistance(passed_orders[curr].location, passed_orders[j].location); 
+                if (!used[j] && dist < tmp_min) {
                     tmp_min = dist;
-                    tmp_index = passed_orders[j].index;
-                    cerr << "inserting " << passed_orders[j].index << endl;
+                    tmp_index = j;
                 }
             }
         }
-        final_index_vec.push_back(tmp_index);
+        used[tmp_index] = true;
+        out_vec.push_back(order_vec[tmp_index]);
+        curr = tmp_index;
+        cerr << curr << endl;
     }
-    for (int i=0;i<100;i++) out_vec.push_back(order_vec[final_index_vec[i]]);
     cout << calc(out_vec) << endl;
-    for(Order o : out_vec) cout << o.index << " ";
-    cout << endl;
+    for(Order o : out_vec) cout << o.index << ",";cout << endl;
 }

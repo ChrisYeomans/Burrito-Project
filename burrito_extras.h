@@ -7,7 +7,12 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
- 
+
+typedef long long ll;
+typedef pair<int, int> ii;
+typedef vector<ii> vii;
+typedef vector<int> vi;
+
 const static double EarthRadiusKm = 6372.8;
  
 inline double DegreeToRadian(double angle) {
@@ -51,20 +56,24 @@ class Order {
 	}
 	Order() {}
 	void print_vals() {
-		cout << fixed;
-		cout  << location.lat << " " << location.lon << " " << time << endl;
+		cerr << fixed;
+		cerr << location.lat << " " << location.lon << " " << time << endl;
 	}
 	double dist(Order one, Order two) {
 		return HaversineDistance(one.location, two.location);
 	}
 	bool achievable(double ct, Coordinate curr_loc) const {
-		return (stoi(time.substr(2, 2)) + -30 >= ct - this->time_to_get(curr_loc));
+		if (curr_loc.lat == this->location.lat && curr_loc.lon == this-> location.lon) {
+			return false;
+		}
+		return (stoi(time.substr(2, 2)) + 30 >= ct + this->time_to_get(curr_loc));
 	}
 	double time_to_get(Coordinate curr) const {
-    	return (HaversineDistance(curr, location)/80)*60;
+    	return (HaversineDistance(curr, this->location)/80)*60;
 	}
-	friend bool operator <(const Order& a, const Order&b);
-	friend bool operator >(const Order& a, const Order&b);
+	friend bool operator <(const Order& a, const Order& b);
+	friend bool operator >(const Order& a, const Order& b);
+	friend bool operator ==(const Order& a, const Order& b);
 };
 
 #endif

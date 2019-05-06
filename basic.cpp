@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "burrito_extras.h"
+#include "calc_score.h"
 #define INF 1000000000
 using namespace std;
 
@@ -12,15 +13,14 @@ int main() {
 	double lat, lon, dist;
 	string time;
 	vector<Order> order_vec;
-	int j, v;
-	cin >> v;
+	int j;
 	
     for (int i=0;i<100;i++) {
     	cin >> time >> lat >> lon >> dist;
-    	order_vec.push_back(Order(lat, lon, time, 1));
+    	order_vec.push_back(Order(lat, lon, time, i));
     }
-    for (int i=0;i<100;i++) {
-    	j = (i+v) % 100;
-    	order_vec[j].print_vals();
-    }
+    cout << calc(order_vec) << endl;
+    for (Order o : order_vec) {
+        cout << o.index << " ";
+    } cout << endl;
 }

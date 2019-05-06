@@ -11,36 +11,35 @@ typedef vector<int> vi;
 
 int main() {
 	string time;
-	int tmp_index;
-	double lat, lon, dist_shop, dist, tmp_min;
-	vector<Coordinate> pos_vec;
-	vector<vector<double>> dist_vec_vec;
-	dist_vec_vec.reserve(100);
-	vi min_dist_vec;
-	vector<Order> order_vec;
+	int tmp_index, curr = 0;
+	double lat, lon, dist, tmp_min, min_start = 9999.99;
+	vector<Order> order_vec, out_vec;
+    vector<bool> used;
+    used.reserve(100);
 
     for (int i=0;i<100;i++) {
-    	cin >> time >> lat >> lon >> dist_shop;
-    	pos_vec.push_back(Coordinate(lat, lon));
-    	cerr  << lat << " " << lon << endl;
+    	cin >> lat >> lon >> time;
     	order_vec.push_back(Order(lat, lon, time, i));
+        if (HaversineDistance(order_vec[i].location, Coordinate(53.38195, -6.59192)) < min_start) {
+            min_start = HaversineDistance(order_vec[i].location, Coordinate(53.38195, -6.59192));
+            curr = i;
+        }
     }
-    for (int i=0;i<100;i++) {
-    	tmp_min = 500.0;
+    while(out_vec.size() < 100) {
+    	tmp_min = 9999.99;
     	for (int j=0;j<100;j++) {
-    		if ( j!=i ) {
-    			dist = HaversineDistance(pos_vec[i], pos_vec[j]);
-    			cerr << dist << endl;
-    			cerr << "                 " << (tmp_min > dist) << "           " << (count(min_dist_vec.begin(), min_dist_vec.end(), j) < 1) << endl;
-    			if ((tmp_min > dist) && (count(min_dist_vec.begin(), min_dist_vec.end(), j) < 1)) {
-    				tmp_min = dist;
-    				tmp_index = j;
-    				cerr << "inserting " << j << endl;
-    			}
-    			dist_vec_vec[i].push_back(dist);
+    		if (j!=curr) {
+                dist = HaversineDistance(order_vec[curr].location, order_vec[j].location); 
+                if (!used[j] && dist < tmp_min) {
+                    tmp_min = dist;
+                    tmp_index = j;
+                }
     		}
     	}
-    	min_dist_vec.push_back(tmp_index);
+        used[tmp_index] = true;
+        out_vec.push_back(order_vec[tmp_index]);
+        curr = tmp_index;
     }
-    cout << calc(order_vec) << " " << endl;
+    cout << calc(out_vec) << endl;
+    for (Order o : out_vec) cout << o.index << ",";cout << endl;
 }
