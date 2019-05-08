@@ -35,7 +35,7 @@ int main() {
     		if (j!=curr) {
                 dist = HaversineDistance(order_vec[curr].location, order_vec[j].location); 
                 if (!used[j] && dist < tmp_min) { 
-                    if (dist < tmp_min*0.917671 || !order_vec[j].achievable(ct, order_vec[curr].location)) { // making sure not to hit nodes early
+                    if (dist < tmp_min*0.92 || !order_vec[j].achievable(ct, order_vec[curr].location)) { // making sure not to hit nodes early
                         tmp_min = dist;
                         tmp_index = j;
                     }
@@ -48,5 +48,5 @@ int main() {
         ct += (tmp_min/80)*60;
     }
     cout << calc(out_vec) << endl;
-    for (Order o : out_vec) cout << o.index << ",";cout << endl;
+    for (Order o : out_vec) cout << o.index+1 << ",";cout << endl;
 }

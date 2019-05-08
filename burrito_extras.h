@@ -13,7 +13,7 @@ typedef pair<int, int> ii;
 typedef vector<ii> vii;
 typedef vector<int> vi;
 
-const static double EarthRadiusKm = 6372.8;
+const static double EarthRadiusKm = 6371;
  
 inline double DegreeToRadian(double angle) {
 	return M_PI * angle / 180.0;
