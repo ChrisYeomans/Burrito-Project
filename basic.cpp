@@ -10,13 +10,13 @@ typedef vector<ii> vii;
 typedef vector<int> vi;
 
 int main() {
-	double lat, lon, dist;
+	double lat, lon;
 	string time;
 	vector<Order> order_vec;
 	int j;
 	
     for (int i=0;i<100;i++) {
-    	cin >> time >> lat >> lon >> dist;
+    	cin >> lat >> lon >> time;
     	order_vec.push_back(Order(lat, lon, time, i));
     }
     cout << calc(order_vec) << endl;

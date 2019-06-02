@@ -1,0 +1,7 @@
+*.out
+basic
+*.h*
+lab*
+notes.md
+rip.txt
+basic_lab.cpp

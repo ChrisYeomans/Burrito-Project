@@ -41,11 +41,12 @@ int main() {
 
     while (!time_q.empty()) {
         if (time_q.top().achievable(ct, cl)) {
-            out_vec.push_back(time_q.top());
-            ct += time_q.top().time_to_get(cl);
+            out_vec.push_back(time_q.top()); // put on out_vec
+            
+            ct += time_q.top().time_to_get(cl); // update current time and current location
             cl = time_q.top().location;
 
-            cerr << time_q.top().index << endl;
+            cerr << time_q.top().index << endl; // keeping a current for the exiting the loop
 
             curr = time_q.top().index;
             used[time_q.top().index] = true;
@@ -57,13 +58,13 @@ int main() {
     }
     cerr << "Switching" << endl;
     while(out_vec.size() < 100) {
-        tmp_min = 99999.99;
+        tmp_min = INF;
         for (int j=0;j<passed_orders.size();j++) {
             if (j!=curr) {
                 dist = HaversineDistance(passed_orders[curr].location, passed_orders[j].location); 
-                if (!used[j] && dist < tmp_min) {
+                if (!used[passed_orders[j].index] && dist < tmp_min) {
                     tmp_min = dist;
-                    tmp_index = j;
+                    tmp_index = passed_orders[j].index;
                 }
             }
         }
